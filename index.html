@@ -1,107 +1,234 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>您的网站大标题</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- 可选：使用Google字体 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>个人网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 顶部栏样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        /* 主要内容区域样式 */
+        .main-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* 博客列表样式 */
+        .blog-section {
+            flex: 2;
+        }
+
+        .blog-post {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blog-post h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* 软件作品样式 */
+        .apps-section {
+            flex: 1;
+        }
+
+        .app-category {
+            margin-bottom: 30px;
+        }
+
+        .app-category h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .app-list {
+            list-style: none;
+        }
+
+        .app-item {
+            margin-bottom: 15px;
+        }
+
+        .app-item a {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .app-item a:hover {
+            background: #e9ecef;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .blog-section,
+            .apps-section {
+                flex: 1;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-links {
+                margin-top: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 头部导航栏 -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Logo">
-                <h1>您的网站大标题</h1>
-            </div>
-            <div class="social-links">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="images/twitter.png" alt="Twitter">
-                </a>
-                <a href="https://linkedin.com" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com" target="_blank">
-                    <img src="images/github.png" alt="GitHub">
-                </a>
-            </div>
+        <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="18" fill="#007bff"/>
+                <text x="20" y="25" text-anchor="middle" fill="white" font-size="16">Logo</text>
+            </svg>
+            <h1>我的个人网站</h1>
+        </div>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
         </div>
     </header>
 
-    <!-- 主体内容 -->
-    <main>
-        <div class="container">
-            <!-- 左侧栏：博客预览列表 -->
-            <section class="blog-preview">
-                <h2>个人博客</h2>
-                <article class="blog-post">
-                    <h3><a href="#">博客文章标题1</a></h3>
-                    <p>这是一段博客文章的简短预览内容...</p>
-                </article>
-                <article class="blog-post">
-                    <h3><a href="#">博客文章标题2</a></h3>
-                    <p>这是一段博客文章的简短预览内容...</p>
-                </article>
-                <article class="blog-post">
-                    <h3><a href="#">博客文章标题3</a></h3>
-                    <p>这是一段博客文章的简短预览内容...</p>
-                </article>
-                <!-- 可根据需要添加更多博客文章 -->
-            </section>
+    <div class="main-content">
+        <section class="blog-section">
+            <article class="blog-post">
+                <h2>最新博客标题</h2>
+                <p>这是博客文章的预览内容。这里可以展示文章的前几行内容，让访问者可以快速了解文章的主题...</p>
+                <a href="#" class="read-more">继续阅读 →</a>
+            </article>
 
-            <!-- 右侧栏：软件作品快捷访问列表 -->
-            <aside class="software-portfolio">
-                <h2>软件作品</h2>
+            <article class="blog-post">
+                <h2>另一篇博客文章</h2>
+                <p>这是另一篇博客文章的预览内容。同样展示文章的开头部分，吸引读者点击阅读全文...</p>
+                <a href="#" class="read-more">继续阅读 →</a>
+            </article>
 
-                <div class="software-category">
-                    <h3>iOS App</h3>
-                    <ul>
-                        <li><a href="#">iOS 应用1</a></li>
-                        <li><a href="#">iOS 应用2</a></li>
-                        <!-- 添加更多iOS应用 -->
-                    </ul>
-                </div>
+            <article class="blog-post">
+                <h2>技术分享文章</h2>
+                <p>这是一篇技术分享文章的预览。介绍一些技术细节和经验分享，帮助其他开发者解决问题...</p>
+                <a href="#" class="read-more">继续阅读 →</a>
+            </article>
+        </section>
 
-                <div class="software-category">
-                    <h3>macOS App</h3>
-                    <ul>
-                        <li><a href="#">macOS 应用1</a></li>
-                        <li><a href="#">macOS 应用2</a></li>
-                        <!-- 添加更多macOS应用 -->
-                    </ul>
-                </div>
+        <aside class="apps-section">
+            <div class="app-category">
+                <h3>iOS Apps</h3>
+                <ul class="app-list">
+                    <li class="app-item">
+                        <a href="#">iOS App 1</a>
+                    </li>
+                    <li class="app-item">
+                        <a href="#">iOS App 2</a>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="software-category">
-                    <h3>Android App</h3>
-                    <ul>
-                        <li><a href="#">Android 应用1</a></li>
-                        <li><a href="#">Android 应用2</a></li>
-                        <!-- 添加更多Android应用 -->
-                    </ul>
-                </div>
+            <div class="app-category">
+                <h3>macOS Apps</h3>
+                <ul class="app-list">
+                    <li class="app-item">
+                        <a href="#">macOS App 1</a>
+                    </li>
+                    <li class="app-item">
+                        <a href="#">macOS App 2</a>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="software-category">
-                    <h3>Windows App</h3>
-                    <ul>
-                        <li><a href="#">Windows 应用1</a></li>
-                        <li><a href="#">Windows 应用2</a></li>
-                        <!-- 添加更多Windows应用 -->
-                    </ul>
-                </div>
-            </aside>
-        </div>
-    </main>
+            <div class="app-category">
+                <h3>Android Apps</h3>
+                <ul class="app-list">
+                    <li class="app-item">
+                        <a href="#">Android App 1</a>
+                    </li>
+                    <li class="app-item">
+                        <a href="#">Android App 2</a>
+                    </li>
+                </ul>
+            </div>
 
-    <!-- 页脚（可选） -->
-    <footer>
-        <div class="container">
-            <p>© 2024 您的名字。保留所有权利。</p>
-        </div>
-    </footer>
+            <div class="app-category">
+                <h3>Windows Apps</h3>
+                <ul class="app-list">
+                    <li class="app-item">
+                        <a href="#">Windows App 1</a>
+                    </li>
+                    <li class="app-item">
+                        <a href="#">Windows App 2</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 </body>
 </html>
